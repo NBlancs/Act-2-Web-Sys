@@ -36,9 +36,12 @@
                     <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
                 </div>
             </div>
+            <button id="themeToggle" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Toggle Theme">
+                <i class="fa fa-moon-o"></i>
+            </button>
             <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white"
                 title="My Account">
-                <img src="https://www.w3schools.com/w3images/avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
+                <img src="https://www.w3schools.com/w3images/avatar3.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
             </a>
         </div>
     </div>
@@ -60,7 +63,7 @@
                 <!-- Profile -->
                 <div class="w3-card w3-round w3-white">
                     <div class="w3-container">
-                        <h4 class="w3-center">My Profile</h4>
+                        <h4 class="w3-center">Noel Omar Blanco</h4>
                         <p class="w3-center"><img src="https://www.w3schools.com/w3images/avatar3.png" class="w3-circle"
                                 style="height:106px;width:106px" alt="Avatar"></p>
                         <hr>
@@ -157,11 +160,16 @@
                             <div class="w3-container w3-padding">
                                 <h6 class="w3-opacity">Social Media template by w3.css</h6>
                                 <p contenteditable="true" class="w3-border w3-padding">Status: Feeling Blue</p>
-                                <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>
+                                <input type="file" id="imageUpload" accept="image/*">
+                                <button type="button" class="w3-button w3-theme" id="postButton"><i class="fa fa-pencil"></i>
                                      Post</button>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div id="newPosts" >
+                    <!-- New posts will be added here -->
                 </div>
 
                 <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
@@ -182,10 +190,24 @@
                             <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom">
                         </div>
                     </div>
-                    <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>
-                         Like</button>
-                    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>
-                         Comment</button>
+                    <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom">
+                        <i class="fa fa-thumbs-up"></i>
+                        <span id="likeCount1">0</span> Like
+                    </button>
+                    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom commentButton" data-post="1">
+                        <i class="fa fa-comment"></i> Comment
+                    </button>
+                    <div id="comments1" class="w3-container">
+                        <!-- Comments will be added here dynamically -->
+                    </div>
+                    <div class="w3-row w3-margin-bottom comment-input-row" style="display: none;">
+                        <div class="w3-col s9">
+                            <input type="text" id="commentInput1" class="w3-input w3-border" placeholder="Add a comment">
+                        </div>
+                        <div class="w3-col s3">
+                            <button class="w3-button w3-theme commentSubmit" data-post="1">Submit</button>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
@@ -197,11 +219,24 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                         laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>
-                         Like</button>
-                    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>
-                         Comment</button>
-                </div>
+                    <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom">
+                      <i class="fa fa-thumbs-up"></i> <span id="likeCount2">0</span> Like
+                    </button>
+                    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom commentButton" data-post="2">
+                      <i class="fa fa-comment"></i> Comment
+                    </button>
+                    <div id="comments2" class="w3-container">
+                      <!-- Comments will be added here dynamically -->
+                    </div>
+                    <div class="w3-row w3-margin-bottom comment-input-row" style="display: none;">
+                      <div class="w3-col s9">
+                        <input type="text" id="commentInput2" class="w3-input w3-border" placeholder="Add a comment">
+                      </div>
+                      <div class="w3-col s3">
+                        <button class="w3-button w3-theme commentSubmit" data-post="2">Submit</button>
+                      </div>
+                    </div>
+                  </div>
 
                 <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
                     <img src="https://www.w3schools.com/w3images/avatar6.png" alt="Avatar" class="w3-left w3-circle w3-margin-right"
@@ -214,10 +249,23 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                         laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>
-                         Like</button>
-                    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>
-                         Comment</button>
+                    <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom">
+                        <i class="fa fa-thumbs-up"></i> <span id="likeCount3">0</span> Like
+                    </button>
+                    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom commentButton" data-post="3">
+                        <i class="fa fa-comment"></i> Comment
+                    </button>
+                    <div id="comments3" class="w3-container">
+                        <!-- Comments will be added here dynamically -->
+                    </div>
+                    <div class="w3-row w3-margin-bottom comment-input-row" style="display: none;">
+                        <div class="w3-col s9">
+                            <input type="text" id="commentInput3" class="w3-input w3-border" placeholder="Add a comment">
+                        </div>
+                        <div class="w3-col s3">
+                            <button class="w3-button w3-theme commentSubmit" data-post="3">Submit</button>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- End Middle Column -->
@@ -284,6 +332,7 @@
     </footer>
 
     <script src="app.js"> </script>
+    <script src="script.js"></script>
 
 </body>
 
