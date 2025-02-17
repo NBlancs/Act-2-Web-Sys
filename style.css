@@ -64,3 +64,13 @@ body.dark-theme {
     background-color: #2d2d2d !important;
     color: #ffffff !important;
 }
+
+/* Modal styles for dark theme */
+.dark-theme .w3-modal-content {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+}
+
+.dark-theme .w3-modal {
+    background-color: rgba(0,0,0,0.8) !important;
+}

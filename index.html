@@ -93,23 +93,23 @@
                             <div class="w3-row-padding">
                                 <br>
                                 <div class="w3-half">
-                                    <img src="/w3images/lights.jpg" style="width:100%" class="w3-margin-bottom">
+                                    <img src="https://th.bing.com/th/id/OIP.U_VJuupQohwnzXcKMztqWgHaEo?rs=1&pid=ImgDetMain" style="width:100%" class="w3-margin-bottom">
                                 </div>
                                 <div class="w3-half">
-                                    <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
+                                    <img src="https://www.pixelstalk.net/wp-content/uploads/2016/07/Background-Beautiful-Nature-Images-HD.jpg" style="width:100%" class="w3-margin-bottom">
                                 </div>
                                 <div class="w3-half">
-                                    <img src="/w3images/mountains.jpg" style="width:100%" class="w3-margin-bottom">
+                                    <img src="https://thewowstyle.com/wp-content/uploads/2015/01/nature-images-6.jpg" style="width:100%" class="w3-margin-bottom">
                                 </div>
                                 <div class="w3-half">
-                                    <img src="/w3images/forest.jpg" style="width:100%" class="w3-margin-bottom">
+                                    <img src="https://www.pixelstalk.net/wp-content/uploads/2016/07/Free-Amazing-Background-Images-Nature.jpg" style="width:100%" class="w3-margin-bottom">
                                 </div>
                                 <div class="w3-half">
-                                    <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
+                                    <img src="https://th.bing.com/th/id/OIP.VyeGOidyaY2qOUtlJD55BgHaFE?rs=1&pid=ImgDetMain" style="width:100%" class="w3-margin-bottom">
                                 </div>
-                                <div class="w3-half">
-                                    <img src="/w3images/snow.jpg" style="width:100%" class="w3-margin-bottom">
-                                </div>
+                                <!-- <div class="w3-half">
+                                    <img src="https://th.bing.com/th/id/OIP.FEqv7YYMNjXtrVYqo7HHzAHaE7?rs=1&pid=ImgDetMain" style="width:100%" class="w3-margin-bottom">
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -279,7 +279,7 @@
                         <img src="https://www.w3schools.com/w3images/forest.jpg" alt="Forest" style="width:100%;">
                         <p><strong>Holiday</strong></p>
                         <p>Friday 15:00</p>
-                        <p><button class="w3-button w3-block w3-theme-l4">Info</button></p>
+                        <p><button onclick="document.getElementById('eventModal').style.display='block'" class="w3-button w3-block w3-theme-l4">Info</button></p>
                     </div>
                 </div>
                 <br>
@@ -330,6 +330,29 @@
     <footer class="w3-container w3-theme-d5">
         <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
     </footer>
+
+    <!-- Event Modal -->
+    <div id="eventModal" class="w3-modal">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+            <header class="w3-container w3-theme-d2">
+                <span onclick="document.getElementById('eventModal').style.display='none'" 
+                    class="w3-button w3-display-topright">&times;</span>
+                <h2>Holiday Event Details</h2>
+            </header>
+            <div class="w3-container w3-padding">
+                <img src="https://www.w3schools.com/w3images/forest.jpg" alt="Event" style="width:100%" class="w3-margin-bottom">
+                <h5><strong>Holiday Retreat</strong></h5>
+                <p><i class="fa fa-calendar fa-fw w3-margin-right"></i> Friday, 15:00</p>
+                <p><i class="fa fa-map-marker fa-fw w3-margin-right"></i> Forest Resort, Mountain View</p>
+                <p class="w3-text-theme"><i class="fa fa-info-circle fa-fw w3-margin-right"></i> Join us for a relaxing weekend getaway in nature!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <footer class="w3-container w3-theme-d2 w3-padding">
+                <button class="w3-button w3-white" onclick="document.getElementById('eventModal').style.display='none'">Close</button>
+            </footer>
+        </div>
+    </div>
 
     <script src="app.js"> </script>
     <script src="script.js"></script>

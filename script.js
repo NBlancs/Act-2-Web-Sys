@@ -150,8 +150,15 @@ function commentPost(postId) {
 
 // Info button functionality (Upcoming Events)
 function showEventInfo() {
-  alert("Showing event info");
-  // In a real application, you would display more detailed information about the event
+    document.getElementById('eventModal').style.display = 'block';
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    const modal = document.getElementById('eventModal');
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
 }
 
 // Accept friend request functionality
