@@ -107,6 +107,34 @@ function createNewPost(statusText, imageHTML, newPostsContainer) {
             input.value = '';
         }
     });
+
+    // Add enter key listener for the new comment input
+    const commentInputField = newPostDiv.querySelector('.w3-input.w3-border');
+    commentInputField.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            const commentsDiv = document.getElementById(`comments-${postId}`);
+            const commentText = this.value;
+
+            if (commentText.trim() !== '') {
+                const newCommentDiv = document.createElement('div');
+                newCommentDiv.classList.add('w3-container', 'w3-left-align', 'w3-padding');
+                newCommentDiv.innerHTML = `
+                    <hr>
+                    <div class="w3-row">
+                        <div class="w3-col m1 l1 w3-center">
+                            <img src="https://www.w3schools.com/w3images/avatar3.png" class="w3-circle" style="height:40px;width:40px" alt="Avatar">
+                        </div>
+                        <div class="w3-col m11 l11">
+                            <h4 class="w3-opacity" style="margin:0">You</h4>
+                            <p>${commentText}</p>
+                        </div>
+                    </div>`;
+                commentsDiv.appendChild(newCommentDiv);
+                this.value = '';
+            }
+        }
+    });
 }
 
 // Like button functionality
@@ -247,6 +275,18 @@ document.addEventListener('DOMContentLoaded', function () {
       button.addEventListener('click', function() {
           const postId = this.dataset.post;
           commentPost(postId);
+      });
+  });
+
+  // Add enter key listener for comment inputs
+  const commentInputs = document.querySelectorAll('.w3-input.w3-border');
+  commentInputs.forEach(input => {
+      input.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+              event.preventDefault();
+              const postId = this.id.split('commentInput')[1];
+              commentPost(postId);
+          }
       });
   });
 
